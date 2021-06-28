@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/selectric.css">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Place an orders</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <input type="text" class="header__search" placeholder="Search">
+            <div class="header__buttons">
+                <button class="header__btn">
+                    <img src="images/icon-settings.svg" alt="Settings">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-letter.svg" alt="Messages">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-bell.svg" alt="Notifications">
+                </button>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">Johan Boerema <img src="images/icon-arr-dropdown.svg"></span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container">
+            <div class="content__header content__header--with-line">
+                <h2 class="title">Place an Orders</h2>
+                <div class="content__header-buttons">
+                    <button class="content__header-btn">
+                        <img src="images/icon-save.svg">
+                        <span>Save as draft</span>
+                    </button>
+                    <span class="content__header-btn-separate"></span>
+                    <button class="content__header-btn">
+                        <img src="images/icon-csv.svg">
+                        <span>CSV</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-pdf.svg">
+                        <span>PDF</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-printer.svg">
+                        <span>Print</span>
+                    </button>
+                </div>
+            </div>
+            <div class="place-and-orders">
+                <div class="place-and-orders__top">
+                    <form action="#" class="place-and-orders__form">
+                        <div class="place-and-orders__form-row">
+                            <span>Requested Delivery Date</span>
+                            <input type="text" class="input input--date">
+                        </div>
+                        <div class="place-and-orders__form-row">
+                            <span>PO Reference</span>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="place-and-orders__form-row">
+                            <span>Billing Address</span>
+                            <div class="place-and-orders__form-select">
+                                <select class="select">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="place-and-orders__form-row">
+                            <span>Shipping Address</span>
+                            <div class="place-and-orders__form-select">
+                                <select class="select">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="place-and-orders__form-row">
+                            <span>Order Comments</span>
+                            <textarea class="place-and-orders__form-textarea" name="" id="" cols="30" rows="10"
+                                      class="textarea"></textarea>
+                        </div>
+                    </form>
+                    <div class="place-and-orders__addresses">
+                        <div class="place-and-orders__addresses-item">
+                            <div class="txt-bold">Billing Address</div>
+                            <div class="place-and-orders__addresses-item-row">Frankfurt</div>
+                            <div class="place-and-orders__addresses-item-row">
+                                Neue Mainzer Str. 52-58, 60311 Frankfurt am Main
+                            </div>
+                            <div class="place-and-orders__addresses-item-row">
+                                Germany
+                            </div>
+                        </div>
+                        <div class="place-and-orders__addresses-item">
+                            <div class="txt-bold">Shipping Address</div>
+                            <div class="place-and-orders__addresses-item-row">Ul. Rymarska 16/5</div>
+                            <div class="place-and-orders__addresses-item-row">
+                                Wroclaw doloslaskie
+                            </div>
+                            <div class="place-and-orders__addresses-item-row">
+                                Poland
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="place-and-orders__table table">
+                    <thead>
+                    <tr>
+                        <th>Product Lookup</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Item Price</th>
+                        <th>Line Total</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" class="orders__filters-search input-search" placeholder="Search">
+                        </td>
+                        <td>
+                            <img src="images/icon-line-and-dots.svg">
+                        </td>
+                        <td>
+                            <input type="text" class="input">
+                        </td>
+                        <td>
+                            49.99
+                        </td>
+                        <td>49.99</td>
+                        <td>
+                            €1,025.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="orders__filters-search input-search" placeholder="Search">
+                        </td>
+                        <td>
+                            <img src="images/icon-line-and-dots.svg">
+                        </td>
+                        <td>
+                            <input type="text" class="input">
+                        </td>
+                        <td>
+                            49.99
+                        </td>
+                        <td>49.99</td>
+                        <td>
+                            €1,025.00
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button class="btn-small place-and-orders__add-row-btn">Click to make new row</button>
+                <div class="place-and-orders__under-table">
+                    <div class="place-and-orders__total-block">
+                        <div class="info-block info-block--green">
+                            <span class="txt-bold">Order Total</span>
+                            <span>€428.00</span>
+                        </div>
+
+                        <button class="btn place-and-orders__btn">Submit Order</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="scripts/jquery.selectric.min.js"></script>
+<script src="scripts/script.min.js"></script>
+</body>
+</html>

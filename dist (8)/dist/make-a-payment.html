@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Make a payment</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link>
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <input type="text" class="header__search" placeholder="Search">
+            <div class="header__buttons">
+                <button class="header__btn">
+                    <img src="images/icon-settings.svg" alt="Settings">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-letter.svg" alt="Messages">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-bell.svg" alt="Notifications">
+                </button>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">Johan Boerema <img src="images/icon-arr-dropdown.svg"></span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container">
+            <div class="content__header content__header--with-line">
+                <h2 class="title">Make a Payment</h2>
+                <div class="content__header-buttons">
+                    <button class="content__header-btn">
+                        <img src="images/icon-csv.svg">
+                        <span>CSV</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-pdf.svg">
+                        <span>PDF</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-printer.svg">
+                        <span>Print</span>
+                    </button>
+                </div>
+            </div>
+            <div class="payment">
+                <table class="payment__table table table--striped">
+                    <thead>
+                    <tr>
+                        <th>Pay</th>
+                        <th>Type</th>
+                        <th>Document Date</th>
+                        <th>Invoice No.</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__custom"></span>
+                            </label>
+                        </td>
+                        <td>
+                            Invoice
+                        </td>
+                        <td>09/04/18</td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-exclamation-red.svg">
+                                <span>Past Due</span>
+                            </div>
+                        </td>
+                        <td>
+                            €573.92
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__custom"></span>
+                            </label>
+                        </td>
+                        <td>
+                            Invoice
+                        </td>
+                        <td>09/04/18</td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-warning.svg">
+                                <span>Due Soon</span>
+                            </div>
+                        </td>
+                        <td>
+                            €573.92
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__custom"></span>
+                            </label>
+                        </td>
+                        <td>
+                            Invoice
+                        </td>
+                        <td>09/04/18</td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-verified.svg">
+                                <span>Applied</span>
+                            </div>
+                        </td>
+                        <td>
+                            €573.92
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__custom"></span>
+                            </label>
+                        </td>
+                        <td>
+                            Invoice
+                        </td>
+                        <td>09/04/18</td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-verified.svg">
+                                <span>Applied</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="txt-red">- €23.14</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__custom"></span>
+                            </label>
+                        </td>
+                        <td>
+                            Invoice
+                        </td>
+                        <td>09/04/18</td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-calendar.svg">
+                                <span>Month +</span>
+                            </div>
+                        </td>
+                        <td>
+                            €285.49
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="payment__under-table">
+                    <div class="info-block">
+                        <span class="txt-bold">Credit on Account</span>
+                        <span>€400.00</span>
+                    </div>
+                    <div class="payment__info-block-wrap">
+                        <div class="info-block info-block--orange">
+                            <span class="txt-bold">Balance remaining</span>
+                            <span>€1,928.00</span>
+                        </div>
+                        <div class="info-block info-block--green">
+                            <span class="txt-bold">Total selected to pay</span>
+                            <span>€428.00</span>
+                        </div>
+
+                        <button class="btn payment__btn">Make Payment</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="scripts/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Chat</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <input type="text" class="header__search" placeholder="Search">
+            <div class="header__buttons">
+                <button class="header__btn">
+                    <img src="images/icon-settings.svg" alt="Settings">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-letter.svg" alt="Messages">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-bell.svg" alt="Notifications">
+                </button>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">Johan Boerema <img src="images/icon-arr-dropdown.svg"></span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container">
+            <div class="content__header content__header--with-line">
+                <h2 class="title">Chat</h2>
+            </div>
+            <div class="chat">
+                <div class="chat__sidebar">
+                    <input type="text" class="chat__search input-search" placeholder="Search">
+                    <div class="chat__history">
+                        <h6 class="chat__history-title">Chat history</h6>
+                        <div class="chat__history-item  chat__history-item--active">
+                            <div class="chat__user-pic chat__user-pic--online">
+                                <img src="images/chat-avatar1.jpg">
+                            </div>
+                            <div>
+                                <div class="chat__history-item-name">
+                                    <span>Ronald Stephens</span>
+                                </div>
+                                <span class="chat__history-item-date">13/04/18</span>
+                            </div>
+                        </div>
+                        <div class="chat__history-item">
+                            <div class="chat__user-pic">
+                                <img src="images/chat-avatar2.jpg">
+                            </div>
+                            <div>
+                                <div class="chat__history-item-name">
+                                    <span>Zachary Nichols</span>
+                                    <span class="chat__history-item-name-new">NEW</span>
+                                </div>
+                                <span class="chat__history-item-date">12/04/18</span>
+                            </div>
+                        </div>
+                        <div class="chat__history-item">
+                            <div class="chat__user-pic">
+                                <img src="images/chat-avatar3.jpg">
+                            </div>
+                            <div>
+                                <div class="chat__history-item-name">
+                                    <span>Stacey Perez</span>
+                                </div>
+                                <span class="chat__history-item-date">11/04/18</span>
+                            </div>
+                        </div>
+                        <div class="chat__history-item">
+                            <div class="chat__user-pic">
+                                <img src="images/chat-avatar4.jpg">
+                            </div>
+                            <div>
+                                <div class="chat__history-item-name">
+                                    <span>Chris Gregory</span>
+                                </div>
+                                <span class="chat__history-item-date">10/04/18</span>
+                            </div>
+                        </div>
+                        <div class="chat__history-item">
+                            <div class="chat__user-pic">
+                                <img src="images/chat-avatar5.jpg">
+                            </div>
+                            <div>
+                                <div class="chat__history-item-name">
+                                    <span>Edith Young</span>
+                                </div>
+                                <span class="chat__history-item-date">09/04/18</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="chat__content">
+                    <div class="chat__header">
+                        <div class="chat__header-user">
+                            <div class="chat__user-pic chat__user-pic--online">
+                                <img src="images/chat-avatar1.jpg">
+                            </div>
+                            <div>
+                                <div class="chat__header-user-name">
+                                    <span>Ronald Stephens</span>
+                                </div>
+                                <span class="chat__header-user-status">Online Strategist</span>
+                            </div>
+                        </div>
+                        <div class="chat__buttons">
+                            <button class="chat__btn">
+                                <img src="images/icon-mute.svg" alt="mute">
+                            </button>
+                            <button class="chat__btn">
+                                <img src="images/icon-phone-call.svg" alt="call">
+                            </button>
+                            <button class="chat__btn">
+                                <img src="images/icon-camera.svg" alt="video">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat__messages">
+                        <div class="chat__messages-date">Jun 16</div>
+                        <div class="chat__message chat__message--right">
+                            <p class="chat__message-text">Hi, Ronald! Lorem ipsum dolor sit amet.</p>
+                            <span class="chat__message-time">10:42</span>
+                        </div>
+                        <div class="chat__message chat__message--left">
+                            <p class="chat__message-text">
+                                Hi
+                            </p>
+                            <p class="chat__message-text">
+                                Sed sit amet scelerisque lectus.
+                            </p>
+                            <p class="chat__message-text">
+                                In viverra augue at urna imperdiet pharetra.
+                            </p>
+                            <span class="chat__message-time">11:22</span>
+                        </div>
+                        <div class="chat__message chat__message--right">
+                            <p class="chat__message-text">Great!</p>
+                            <span class="chat__message-time">11:34</span>
+                        </div>
+                        <div class="chat__message chat__message--right">
+                            <p class="chat__message-text">Proin lorem enim, accumsan ut mattis nec, pulvinar a metus.</p>
+                            <span class="chat__message-time">11:34</span>
+                        </div>
+                        <div class="chat__message chat__message--left">
+                            <p class="chat__message-text">
+                                Hi
+                            </p>
+                            <p class="chat__message-text">
+                                Sed sit amet scelerisque lectus.
+                            </p>
+                            <p class="chat__message-text">
+                                In viverra augue at urna imperdiet pharetra.
+                            </p>
+                            <span class="chat__message-time">11:49</span>
+                        </div>
+                        <div class="chat__message chat__message--left">
+                            <p class="chat__message-text">
+                                Hi
+                            </p>
+                            <p class="chat__message-text">
+                                Sed sit amet scelerisque lectus.
+                            </p>
+                            <p class="chat__message-text">
+                                In viverra augue at urna imperdiet pharetra.
+                            </p>
+                            <span class="chat__message-time">11:51</span>
+                        </div>
+                    </div>
+                    <div class="chat__send-block">
+                        <textarea name="message" id="" placeholder="Your message..."></textarea>
+                        <div class="chat__send-block-footer">
+                            <div class="chat__buttons">
+                                <button class="chat__btn chat__btn--white">
+                                    <img src="images/icon-chat-vertical-dots.svg" alt="more">
+                                </button>
+                                <button class="chat__btn chat__btn--white">
+                                    <img src="images/icon-clip.svg" alt="attach">
+                                </button>
+                                <button class="chat__btn chat__btn--white">
+                                    <img src="images/icon-photo-camera.svg" alt="photo">
+                                </button>
+                            </div>
+                            <button class="btn chat__send-btn">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="scripts/script.min.js"></script>
+</body>
+</html>

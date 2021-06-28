@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>apex</title>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+	</head>
+<body>	
+
+
+ 
+  
+<div id="app">
+  <div v-if="!ready">
+    Loading...
+  </div>
+  <div v-else>
+    <div v-for="(question_id, index) in uniqueQuestionIds" :key="index">
+      <apexchart type="area" height="350" :options="getchartOptions(question_id)" :series="getQuestionSeries(question_id)"></apexchart>
+    </div>
+  </div>
+  
+</div>
+ 
+
+
+<script>
+ 
+
+  var app = new Vue({
+    el: '#app',
+    components: {
+      apexchart: VueApexCharts,
+    },
+    data: {
+      ready: false,
+      questions: [],
+
+
+      
+    },
+  
+    created: function() {
+      this.getResults();
+    },
+    
+    computed: {
+      
+      
+      
+      uniqueQuestionIds: function() {
+ 				var ids = this.questions.map(function (item) {
+          return item.QuestionId;
+        });
+        let arr = [];
+        for (var i = 0; i < ids.length; i++) {
+          if (arr.indexOf(ids[i]) < 0) {
+            arr.push(ids[i]);
+          }
+        }
+        return arr;
+      },
+      
+      getXax: function() {
+ 				var ids = this.questions.map(function (item) {
+          return item.CreatedOnD;
+        });
+        let xax = [];
+        for (var i = 0; i < ids.length; i++) {
+          if (xax.indexOf(ids[i]) < 0) {
+            xax.push(ids[i]);
+          }
+        }
+        return xax;
+      },
+      
+      getD: function() {
+ 				var ids = this.questions.map(function (item) {
+          return item.CreatedOnD;
+        });
+        
+        var idds = this.questions.map(function (item) {
+          return item.val3;
+        });
+       
+        
+        let d = [];
+        for (var i = 0; i < ids.length; i++) {
+          if (d.indexOf(ids[i]) < 0) {
+            d.push(idds[i]);
+          }
+        }
+        return d;
+        
+       
+      },
+      
+
+      getYax: function() {
+ 				var ids = this.questions.map(function (item) {
+          return item.CreatedOnD;
+        });
+        let yax = [];
+        for (var i = 0; i < ids.length; i++) {
+          if (yax.indexOf(ids[i]) < 0) {
+            yax.push(ids[i]);
+          }
+        }
+        return yax;
+        
+      },
+      
+      
+      
+      
+      
+    },
+    
+    
+    methods: {
+      
+
+      
+      getResults: function() {
+        
+        var vm = this;
+          var result = '[{"SubmissionId":111,"QuestionId":27,"CreatedOn":"2020-06-07 11:54:47","CreatedOnD":"2020-06-07 11:54","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":1,"val2":6,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":115,"QuestionId":27,"CreatedOn":"2020-06-07 15:32:59","CreatedOnD":"2020-06-07 15:32","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":1,"val2":3,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":116,"QuestionId":27,"CreatedOn":"2020-06-08 10:17:17","CreatedOnD":"2020-06-08 10:17","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":5,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":117,"QuestionId":27,"CreatedOn":"2020-06-09 10:07:08","CreatedOnD":"2020-06-09 10:07","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":5,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":120,"QuestionId":27,"CreatedOn":"2020-06-10 10:10:29","CreatedOnD":"2020-06-10 10:10","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":6,"val2":6,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":121,"QuestionId":27,"CreatedOn":"2020-06-11 19:49:47","CreatedOnD":"2020-06-11 19:49","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":5,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":122,"QuestionId":27,"CreatedOn":"2020-06-12 12:34:00","CreatedOnD":"2020-06-12 12:34","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":3,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.49,"DCv2":1.64},{"SubmissionId":125,"QuestionId":27,"CreatedOn":"2020-06-14 10:13:01","CreatedOnD":"2020-06-14 10:13","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":6,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.37,"DCv2":1.64},{"SubmissionId":126,"QuestionId":27,"CreatedOn":"2020-06-16 21:40:00","CreatedOnD":"2020-06-16 21:40","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":2,"val2":2,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.19,"DCv2":2.14},{"SubmissionId":88,"QuestionId":27,"CreatedOn":"2020-06-17 10:02:35","CreatedOnD":"2020-06-17 10:02","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":3,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.69,"DCv2":2.59},{"SubmissionId":128,"QuestionId":27,"CreatedOn":"2020-06-20 12:34:25","CreatedOnD":"2020-06-20 12:34","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":0,"val2":0,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":2.15,"DCv2":3.22},{"SubmissionId":127,"QuestionId":27,"CreatedOn":"2020-06-22 10:06:47","CreatedOnD":"2020-06-22 10:06","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":2,"val2":2,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":2.47,"DCv2":3.8},{"SubmissionId":129,"QuestionId":27,"CreatedOn":"2020-06-24 19:51:28","CreatedOnD":"2020-06-24 19:51","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":5,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.91,"DCv2":3.42},{"SubmissionId":130,"QuestionId":27,"CreatedOn":"2020-06-26 10:12:37","CreatedOnD":"2020-06-26 10:12","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":2,"val2":2,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.91,"DCv2":3.18},{"SubmissionId":132,"QuestionId":27,"CreatedOn":"2020-06-27 19:11:15","CreatedOnD":"2020-06-27 19:11","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":0,"val2":0,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":1.53,"DCv2":2.02},{"SubmissionId":131,"QuestionId":27,"CreatedOn":"2020-06-28 15:03:46","CreatedOnD":"2020-06-28 15:03","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":3,"val3":"Am de gand sa beau ceva apa si sa fac vegetal la blender","DCv1":2.06,"DCv2":2.72},{"SubmissionId":115,"QuestionId":28,"CreatedOn":"2020-06-07 15:32:59","CreatedOnD":"2020-06-07 15:32","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":4,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":116,"QuestionId":28,"CreatedOn":"2020-06-08 10:17:15","CreatedOnD":"2020-06-08 10:17","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":6,"val2":6,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":117,"QuestionId":28,"CreatedOn":"2020-06-09 10:07:09","CreatedOnD":"2020-06-09 10:07","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":6,"val2":6,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":120,"QuestionId":28,"CreatedOn":"2020-06-10 10:10:30","CreatedOnD":"2020-06-10 10:10","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":5,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":121,"QuestionId":28,"CreatedOn":"2020-06-11 19:49:45","CreatedOnD":"2020-06-11 19:49","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":4,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":122,"QuestionId":28,"CreatedOn":"2020-06-12 12:34:00","CreatedOnD":"2020-06-12 12:34","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":2,"val2":2,"val3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis maximus erat. Fusce suscipit elementum nunc eu posuere. Pellentesque augue justo, hendrerit a ipsum eget, fringilla tempus sem. Pellentesque semper scelerisque urna. Donec velit odio, semper non dui quis, condimentum cursus sem. Nulla aliquam, nunc sed laoreet ullamcorper, est diam volutpat est, sit amet malesuada arcu metus quis lorem. Mauris ut purus rutrum magna convallis auctor id ut metus. Mauris nec elit pellentesque, accumsan metus ac, aliquam ante. Sed eget pharetra libero. Aliquam justo est, eleifend bibendum tristique nec, ultricies non est.","DCv1":null,"DCv2":null},{"SubmissionId":125,"QuestionId":28,"CreatedOn":"2020-06-14 10:13:00","CreatedOnD":"2020-06-14 10:13","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":4,"val2":6,"val3":"nothing here today","DCv1":1.2,"DCv2":1.75},{"SubmissionId":126,"QuestionId":28,"CreatedOn":"2020-06-16 21:40:00","CreatedOnD":"2020-06-16 21:40","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":0,"val2":1,"val3":"nothing here today","DCv1":1.89,"DCv2":2.57},{"SubmissionId":88,"QuestionId":28,"CreatedOn":"2020-06-17 10:02:36","CreatedOnD":"2020-06-17 10:02","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":0,"val2":1,"val3":"nothing here today","DCv1":1.91,"DCv2":2.73},{"SubmissionId":128,"QuestionId":28,"CreatedOn":"2020-06-20 12:34:26","CreatedOnD":"2020-06-20 12:34","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":0,"val2":0,"val3":"nothing here today","DCv1":1.7,"DCv2":3.07},{"SubmissionId":127,"QuestionId":28,"CreatedOn":"2020-06-22 10:06:49","CreatedOnD":"2020-06-22 10:06","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":2,"val2":2,"val3":"nothing here today","DCv1":2.12,"DCv2":3.55},{"SubmissionId":129,"QuestionId":28,"CreatedOn":"2020-06-24 19:51:30","CreatedOnD":"2020-06-24 19:51","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":1,"val2":1,"val3":"nothing here today","DCv1":2.14,"DCv2":2.92},{"SubmissionId":130,"QuestionId":28,"CreatedOn":"2020-06-26 10:12:38","CreatedOnD":"2020-06-26 10:12","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":4,"val3":"nothing here today","DCv1":2.24,"DCv2":2.83},{"SubmissionId":132,"QuestionId":28,"CreatedOn":"2020-06-27 19:11:15","CreatedOnD":"2020-06-27 19:11","SurveyId":18,"UserId":3961,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":0,"val2":0,"val3":"nothing here today","DCv1":1.64,"DCv2":2.47},{"SubmissionId":131,"QuestionId":28,"CreatedOn":"2020-06-28 15:03:46","CreatedOnD":"2020-06-28 15:03","SurveyId":18,"UserId":1,"TYPE":"RANGE","minRange":0,"maxRange":7,"val1":3,"val2":5,"val3":"Ma doare un pic capul insa am a fac Yoga, 1h","DCv1":2.67,"DCv2":4.13}]'; 
+       
+          var resultJSON = (JSON.parse(result));
+            vm.questions = resultJSON;
+            
+    
+            
+            vm.ready = true;
+    // in mod normal folosesc ajax ca sa obtin datele din backend. Insa acum am pus mai sus manual pt a putea tu sa lucrezi
+      /*    
+      
+          $.ajax({
+          url: 'DesktopModules/XModPro/Feed.aspx',
+          method: 'GET',
+          dataType: 'text',
+          async: false,
+          data: {
+            pid: 0,
+            xfd: 'mm_GetSurveyResults',
+            SurveyId: 18,
+            userId: 1,
+          },
+
+          success: function(result) {
+            //console.log("x",result);
+            //var resultJSON = (JSON.parse(result));
+           // vm.questions = resultJSON.result;
+             
+            var resultJSON = (JSON.parse(result));
+            vm.questions = resultJSON;
+            
+            
+          //  var q = vm.questions[0];
+           // var min = q.minRange;
+           // var max = q.maxRange;
+            
+            // vm.chartOptions.yaxis.min = min;
+            // vm.chartOptions.yaxis.max = max;
+            
+            vm.ready = true;
+            
+          }
+        });
+          */
+// aici se termina modul de a obtine datele din backend
+      },
+      
+    getQuestionSeries: function(question_id) {
+        
+      // limit the responses to the ones of this particular question
+        var responses = this.questions.filter(function (item) {
+      		return item.QuestionId == question_id;
+    		});
+        
+
+        // we need two series for each response
+        return [
+          {
+            name: "Reflect",
+            data: responses.map(function (response) {
+              // each item in the data is an array with timestamp and value
+              // so that we can build a timeseries in the chart
+              return [
+                Date.parse(response.CreatedOn),
+                response.val1
+              ]
+            })
+            
+          },
+          
+          {
+            name: "Intent",
+            data: responses.map(function (response) { 
+              return [
+               Date.parse(response.CreatedOn),
+                response.val2,  response.val3
+                
+              ]
+            }),
+          }
+          ,
+          {
+            name: "DC Refl",
+            data: responses.map(function (response) { 
+              return [
+                Date.parse(response.CreatedOn),
+                response.DCv1
+              ]
+            }),
+          }	
+          ,
+          {
+            name: "DC Int",
+            data: responses.map(function (response) { 
+              return [
+                Date.parse(response.CreatedOn),
+                response.DCv2
+              ]
+            }),
+          }
+          //
+        
+        ];
+        
+
+      },
+      
+      getchartOptions: function(question_id) {
+        
+  
+       
+        var xval = this.getXax;
+let self = this;
+
+        return {
+        chart: {
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        colors: ['#77B6EA', '#9ACD32', '#8b0000' , '#FFA500'],
+         
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Limiting vs Empowering',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+          
+         xaxis: { 
+           type: "datetime",
+           categories: [ xval ],
+          
+           title: {
+             text: 'Time'
+           },
+           labels: {
+            rotate: -45
+          },
+           tickPlacement: 'between',
+         },
+          
+    
+        yaxis: {
+          title: {
+            text: 'Intensity'
+          },
+          min: this.questions[0].Minrange,// exista o varianta dinamica?
+          max: this.questions[0].Maxrange
+        },
+          
+       tooltip: {
+                    x: {
+                        format: "dd MMM yyyy hh:mm",
+                    },
+                    custom: function ({
+                        series,
+                        seriesIndex,
+                        dataPointIndex,
+                        w,
+                    }) {
+                        return `<div class="arrow_box"><span>${self.questions[dataPointIndex].val3}</span></div>`;
+                    },
+                    /*
+         y: {
+        formatter:
+           function (y) {
+           
+            return y;
+            
+          }
+                      
+           //function(responses, series, data, dataPointIndex) {
+          // use series argument to pull original string from chart data
+          // $vm.series[1].data[0][2]
+         //return  series[1].name // .data[dataPointIndex][2]
+       
+              
+        //}
+      },
+        
+          
+         
+    //
+    */
+                },
+        
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+      };
+        
+
+      }
+      
+      
+      
+    }
+  });
+  
+
+
+</script>
+</body>
+</html>

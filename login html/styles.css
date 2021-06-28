@@ -1,0 +1,92 @@
+.login_form {
+    width: 300px;
+    margin: 50px auto 0;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+.login_form_logo {
+    padding: 11px;
+    text-align: center;
+    background-color: rgba(241,241,241,0.8);
+    color: #333;
+}
+.logo_image {
+    height: 58px;
+    width: auto;
+    margin: 0 0 11px;
+}
+.logo_title {
+    font-size: 22px;
+    padding: 0 10px;
+    line-height: 30px;
+}
+.nav-item {
+    width: 50%;
+    text-align: center;
+}
+.nav-item a {
+    color: rgba(92,102,111,0.6);
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 1px 0 0 #5c666f;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border: none;
+    color: rgba(92,102,111,0.6);
+}
+.tab-content {
+    padding: 20px;
+}
+.tab-content .tab-pane .btn-light {
+    margin-bottom: 20px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #865f83;
+    border-color: #865f83;
+}
+.tab-content p {
+    text-align: center;
+    color: rgba(92,102,111,0.6);
+}
+.btn-light > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.btn-light .logo_icon {
+    width: 40px;
+    height: 40px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxNTAuMSAxNjcuOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTUwLjEgMTY3LjgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIzMSwxMzUuOCAzMC45LDEzNS44IDc1LjEsMTY3LjggMTE5LjIsMTM1LjggNzUuMSwxMDMuNyAJIi8+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTMuNyw1MS45TDMuNyw1MS45Qy02LjYsODMuNiw1LjMsMTE3LjIsMzEsMTM1LjhsMCwwbDE2LjktNTEuOUwzLjcsNTEuOWw1NC41LDBMNzUuMSwwbDAsMEgyMC41TDMuNyw1MS45eg0KCQkiLz4NCgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTQ2LjUsNTEuOUwxNDYuNSw1MS45TDE0Ni41LDUxLjlMMTI5LjYsMEg3NS4xbDAsMGwxNi45LDUxLjlMMTQ2LjUsNTEuOWwtNDQuMSwzMi4xbDE2LjgsNTEuOQ0KCQlDMTQ2LjIsMTE2LjIsMTU2LjMsODIsMTQ2LjUsNTEuOXoiLz4NCjwvZz4NCjwvc3ZnPg0K);
+    background-repeat: no-repeat;
+}
+.btn_label {
+    padding-left: 10px;
+    color: #ffffff;
+}
+.forgot_password {
+    text-align: center;
+    font-size: 13px;
+}
+.forgot_password a {
+    color: rgba(0,0,0,0.87);
+}
+.forgot_password a:hover {
+    color: rgba(0,0,0,0.87);
+}
+form .btn-primary {
+    width: 100%;
+    color: #ffffff;
+    background-color: #865f83;
+    border-color: #865f83;
+}
+form .agree_terms {
+    background: #eee;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0,0,0,0.54);
+    line-height: 22px;
+    padding: 10px;
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Order</title>
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <div class="header__burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="#" class="header__logo-mob">
+                <img src="images/appmakerz.svg" alt="logo">
+            </a>
+            <div class="header__controls">
+                <input type="text" class="header__search" placeholder="Search">
+                <div class="header__buttons">
+                    <button class="header__btn">
+                        <img src="images/icon-settings.svg" alt="Settings">
+                        <span>Settings</span>
+                    </button>
+                    <button class="header__btn">
+                        <img src="images/icon-letter.svg" alt="Messages">
+                        <span>Messages</span>
+                    </button>
+                    <button class="header__btn">
+                        <img src="images/icon-bell.svg" alt="Notifications">
+                        <span>Notifications</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">
+                    Johan Boerema
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.37087 5.37085L9.8464 0.89532C10.0512 0.690497 10.0512 0.358422 9.8464 0.153599C9.64158 -0.0511995 9.3095 -0.0511995 9.10468 0.153599L5 4.25828L0.895344 0.153598C0.690521 -0.0511999 0.358447 -0.0511999 0.153624 0.153598C0.0511999 0.255997 -1.70582e-08 0.390247 -2.29254e-08 0.524471C-2.87925e-08 0.658696 0.0511999 0.792945 0.153624 0.895344L4.62915 5.37088C4.83398 5.57568 5.16605 5.57568 5.37087 5.37085Z"
+          fill="#2DAFE5"/>
+</svg>
+                </span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container">
+            <div class="content__header content__header--with-line">
+                <h2 class="title">Orders</h2>
+                <div class="content__header-breadcrumbs">
+                    <div class="content__header-breadcrumbs-item">72827193</div>
+                </div>
+                <div class="content__header-buttons">
+                    <button class="btn-small btn-small--icon back-btn">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.91428 0.90862C4.08346 0.739445 4.34979 0.739445 4.51897 0.90862C4.68243 1.07208 4.68243 1.34413 4.51897 1.50721L1.45286 4.57332H11.5706C11.8065 4.57332 12 4.76078 12 4.99664C12 5.23249 11.8065 5.42605 11.5706 5.42605H1.45286L4.51897 8.48644C4.68243 8.65562 4.68243 8.92805 4.51897 9.09113C4.34979 9.26031 4.08346 9.26031 3.91428 9.09113L0.12232 5.29917C-0.0411396 5.13571 -0.0411396 4.86366 0.12232 4.70058L3.91428 0.90862Z"/>
+                        </svg>
+                        <span>Back to List</span>
+                    </button>
+                    <button class="btn-small btn-small--icon table-mob-filters-close">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.91428 0.90862C4.08346 0.739445 4.34979 0.739445 4.51897 0.90862C4.68243 1.07208 4.68243 1.34413 4.51897 1.50721L1.45286 4.57332H11.5706C11.8065 4.57332 12 4.76078 12 4.99664C12 5.23249 11.8065 5.42605 11.5706 5.42605H1.45286L4.51897 8.48644C4.68243 8.65562 4.68243 8.92805 4.51897 9.09113C4.34979 9.26031 4.08346 9.26031 3.91428 9.09113L0.12232 5.29917C-0.0411396 5.13571 -0.0411396 4.86366 0.12232 4.70058L3.91428 0.90862Z"/>
+                        </svg>
+                        <span>Back</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-csv.svg">
+                        <span>CSV</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-pdf.svg">
+                        <span>PDF</span>
+                    </button>
+                    <button class="content__header-btn">
+                        <img src="images/icon-printer.svg">
+                        <span>Print</span>
+                    </button>
+                </div>
+            </div>
+            <div class="open-order">
+                <div class="open-order__info">
+                    <div class="open-order__info-number">
+                        Sales Number: <span>72827193</span>
+                    </div>
+                    <div class="open-order__info-row">
+                        <div class="open-order__info-item">
+                            <div class="open-order__info-item-title">Bill to</div>
+                            <span class="open-order__info-item-name">Johan Boerema</span>
+                            <span class="open-order__info-item-address">Neue Mainzer Str. 52-58, 60311 Frankfurt am Main, Germany</span>
+                        </div>
+                        <div class="open-order__info-item">
+                            <div class="open-order__info-item-title">Ship to</div>
+                            <span class="open-order__info-item-name">Johan Boerema</span>
+                            <span class="open-order__info-item-address">Neue Mainzer Str. 52-58, 60311 Frankfurt am Main, Germany</span>
+                        </div>
+                        <div class="open-order__info-item">
+                            <div class="open-order__info-item-row">
+                                <span class="open-order__info-item-row-title">Order Date: </span>
+                                <span>09/04/18</span>
+                            </div>
+                            <div class="open-order__info-item-row">
+                                <span class="open-order__info-item-row-title">Order Status: </span>
+                                <span class="open-order__info-item-row-status">
+                                    <img src="images/icon-open-box-gray.svg">
+                                    Open
+                                </span>
+                            </div>
+                            <div class="open-order__info-item-row">
+                                <span class="open-order__info-item-row-title">PO Ref No: </span>
+                                <span>#ABC-728178</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="table-mob-filters-btn">
+                    </button>
+                </div>
+                <div class="table-mob-filters">
+                    <span class="txt-bold">Select table tittles</span>
+                    <div class="table-mob-filters__items-wrap">
+                        <div class="table-mob-filters__items">
+                            <div class="table-mob-filters__item table-mob-filters__item--active">#</div>
+                            <div class="table-mob-filters__item table-mob-filters__item--active">Item Name</div>
+                            <div class="table-mob-filters__item">Description</div>
+                            <div class="table-mob-filters__item">Quantity</div>
+                            <div class="table-mob-filters__item">Shipped Quantity</div>
+                            <div class="table-mob-filters__item">Price</div>
+                        </div>
+                    </div>
+                </div>
+                <table class="open-order__table table table--striped-grey">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Item Name</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Shipped Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7234</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image1.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                        <td>Vivamus at dolor ut nunc vehicula suscipit</td>
+                        <td>
+                            20
+                        </td>
+                        <td>20</td>
+                        <td>
+                            €1,025.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7235</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image2.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                        <td>Vivamus at dolor ut nunc vehicula suscipit</td>
+                        <td>
+                            20
+                        </td>
+                        <td>10</td>
+                        <td>
+                            €1,025.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7236</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image3.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                        <td>Vivamus at dolor ut nunc vehicula suscipit</td>
+                        <td>
+                            20
+                        </td>
+                        <td>12</td>
+                        <td>
+                            €1,025.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7237</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image4.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                        <td>Vivamus at dolor ut nunc vehicula suscipit</td>
+                        <td>
+                            20
+                        </td>
+                        <td>20</td>
+                        <td>
+                            €1,025.00
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="open-order__table open-order__table--mob table table--striped-grey">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Item Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7234</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image1.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7235</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image2.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7236</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image3.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="txt-bold">7237</span>
+                        </td>
+                        <td>
+                            <div class="open-order__item">
+                                <img src="images/item-image4.jpg">
+                                <span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="open-order__under-table">
+                    <div class="open-order__total-block">
+                        <div class="open-order__total-block-row">
+                            <span class="txt-bold">Sub-total:</span>
+                            <span>€4,100.00</span>
+                        </div>
+                        <div class="open-order__total-block-row">
+                            <span class="txt-bold">Discount:</span>
+                            <span>0.00%</span>
+                        </div>
+                        <div class="open-order__total-block-row">
+                            <span class="txt-bold">VAT:</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="open-order__total">EUR 4,100.00</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="scripts/script.min.js"></script>
+</body>
+</html>

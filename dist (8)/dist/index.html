@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <input type="text" class="header__search" placeholder="Search">
+            <div class="header__buttons">
+                <button class="header__btn">
+                    <img src="images/icon-settings.svg" alt="Settings">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-letter.svg" alt="Messages">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-bell.svg" alt="Notifications">
+                </button>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">Johan Boerema <img src="images/icon-arr-dropdown.svg"></span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container-wrap">
+            <div class="container">
+                <div class="content__header">
+                    <h2 class="title">Dashboard</h2>
+                </div>
+                <div class="dashboard">
+                    <div class="dashboard__top">
+                        <div class="dashboard__top-long-wrap">
+                            <div class="dashboard__top-long">
+                                <div>
+                                    <h6 class="dashboard__top-long-title">Place an order</h6>
+                                    <p class="dashboard__top-long-description">Search Products and Create Order Lines</p>
+                                </div>
+                                <div class="dashboard__top-long-img">
+                                    <img src="images/icon-cart-white.svg">
+                                </div>
+                            </div>
+                            <div class="dashboard__top-long">
+                                <div>
+                                    <h6 class="dashboard__top-long-title">Make a Payment</h6>
+                                    <p class="dashboard__top-long-description">Credit card, PayPal, Worldpay, On Account</p>
+                                </div>
+                                <div class="dashboard__top-long-img">
+                                    <img src="images/icon-payment-white.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard__top-small-wrap">
+                            <div class="dashboard__top-small">
+                                <div class="dashboard__top-small-header">
+                                    <img src="images/icon-exclamation.svg">
+                                    <span>Past Due</span>
+                                </div>
+                                <div class="dashboard__top-small-value">€ 2100.50</div>
+                            </div>
+                            <div class="dashboard__top-small">
+                                <div class="dashboard__top-small-header">
+                                    <img src="images/icon-time.svg">
+                                    <span>Due Soon</span>
+                                </div>
+                                <div class="dashboard__top-small-value">
+                                    € 369.22
+                                </div>
+                            </div>
+                            <div class="dashboard__top-small">
+                                <div class="dashboard__top-small-header">
+                                    <img src="images/icon-flag.svg">
+                                    <span>Total Outstanding</span>
+                                </div>
+                                <div class="dashboard__top-small-value">€ 1568.50</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dashboard__bottom">
+                        <div class="dashboard__bottom-item">
+                            <div class="dashboard__bottom-item-header">
+                                <h6 class="dashboard__bottom-item-title">Last 5 Orders</h6>
+                                <div class="dashboard__bottom-item-img">
+                                    <img src="images/icon-orders-white.svg">
+                                </div>
+                            </div>
+                            <table class="dashboard__bottom-item-table">
+                                <tr>
+                                    <th>Sales Number</th>
+                                    <th>Order Date</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                                <tbody>
+                                <tr>
+                                    <td><a href="#">08272718</a></td>
+                                    <td>20/04/19</td>
+                                    <td>
+                                        <div class="table-status">
+                                            <img src="images/icon-shipped.svg" alt="shipped">
+                                            <span>Shipped</span>
+                                        </div>
+                                    </td>
+                                    <td><img src="images/icon-vertical-dots.svg"></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">72817283</a></td>
+                                    <td>19/04/19</td>
+                                    <td>
+                                        <div class="table-status">
+                                            <img src="images/icon-open-box.svg" alt="open">
+                                            <span>Open</span>
+                                        </div>
+                                    </td>
+                                    <td><img src="images/icon-vertical-dots.svg"></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">92047147</a></td>
+                                    <td>19/04/19</td>
+                                    <td>
+                                        <div class="table-status">
+                                            <img src="images/icon-shipped.svg" alt="shipped">
+                                            <span>Shipped</span>
+                                        </div>
+                                    </td>
+                                    <td><img src="images/icon-vertical-dots.svg"></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">72819374</a></td>
+                                    <td>18/04/19</td>
+                                    <td>
+                                        <div class="table-status">
+                                            <img src="images/icon-open-box.svg" alt="open">
+                                            <span>Open</span>
+                                        </div>
+                                    </td>
+                                    <td><img src="images/icon-vertical-dots.svg"></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">46381922</a></td>
+                                    <td>17/04/19</td>
+                                    <td>
+                                        <div class="table-status">
+                                            <img src="images/icon-open-box.svg" alt="open">
+                                            <span>Open</span>
+                                        </div>
+                                    </td>
+                                    <td><img src="images/icon-vertical-dots.svg"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <button class="dashboard__bottom-item-btn">view all</button>
+                        </div>
+                        <div class="dashboard__bottom-item-wrap">
+                            <div class="dashboard__bottom-item">
+                                <div class="dashboard__bottom-item-header">
+                                    <h6 class="dashboard__bottom-item-title">Next 5 Deliveries Due</h6>
+                                    <div class="dashboard__bottom-item-img">
+                                        <img src="images/icon-deliveries-white.svg">
+                                    </div>
+                                </div>
+                                <table class="dashboard__bottom-item-table">
+                                    <tr>
+                                        <th>Delivery Number</th>
+                                        <th>Due Date</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#">99272348</a></td>
+                                        <td>17/04/19</td>
+                                        <td>
+                                            <div class="table-status">
+                                                <img src="images/icon-shipped.svg" alt="Dispatched">
+                                                <span>Dispatched</span>
+                                            </div>
+                                        </td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">12817483</a></td>
+                                        <td>18/04/19</td>
+                                        <td>
+                                            <div class="table-status">
+                                                <img src="images/icon-open-box.svg" alt="Out for Delivery">
+                                                <span>Out for Delivery</span>
+                                            </div>
+                                        </td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">88047367</a></td>
+                                        <td>19/04/19</td>
+                                        <td>
+                                            <div class="table-status">
+                                                <img src="images/icon-shipped.svg" alt="Dispatched">
+                                                <span>Dispatched</span>
+                                            </div>
+                                        </td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">74890674</a></td>
+                                        <td>20/04/19</td>
+                                        <td>
+                                            <div class="table-status">
+                                                <img src="images/icon-open-box.svg" alt="Out for Delivery">
+                                                <span>Out for Delivery</span>
+                                            </div>
+                                        </td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">79381212</a></td>
+                                        <td>21/04/19</td>
+                                        <td>
+                                            <div class="table-status">
+                                                <img src="images/icon-credit-card-red.svg" alt="Pending">
+                                                <span>Pending</span>
+                                            </div>
+                                        </td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button class="dashboard__bottom-item-btn">view all</button>
+                            </div>
+                            <div class="dashboard__bottom-item">
+                                <div class="dashboard__bottom-item-header">
+                                    <h6 class="dashboard__bottom-item-title">Outstanding Payments</h6>
+                                    <div class="dashboard__bottom-item-img">
+                                        <img src="images/icon-credit-card-white.svg">
+                                    </div>
+                                </div>
+                                <table class="dashboard__bottom-item-table">
+                                    <tr>
+                                        <th>Invoice Number</th>
+                                        <th>Due Date</th>
+                                        <th>Amount</th>
+                                        <th></th>
+                                    </tr>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#">08272718</a></td>
+                                        <td>20/04/19</td>
+                                        <td>€289.25</td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">72817283</a></td>
+                                        <td>19/04/19</td>
+                                        <td>€738.98</td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">92047147</a></td>
+                                        <td>19/04/19</td>
+                                        <td>€378.38</td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">72819374</a></td>
+                                        <td>18/04/19</td>
+                                        <td>€137.98</td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">46381922</a></td>
+                                        <td>17/04/19</td>
+                                        <td>€649.22</td>
+                                        <td><img src="images/icon-vertical-dots.svg"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button class="dashboard__bottom-item-btn">view all</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

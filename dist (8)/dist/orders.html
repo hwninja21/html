@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/selectric.css">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Orders</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <input type="text" class="header__search" placeholder="Search">
+            <div class="header__buttons">
+                <button class="header__btn">
+                    <img src="images/icon-settings.svg" alt="Settings">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-letter.svg" alt="Messages">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-bell.svg" alt="Notifications">
+                </button>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">Johan Boerema <img src="images/icon-arr-dropdown.svg"></span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container">
+            <div class="content__header content__header--with-line">
+                <h2 class="title">Orders</h2>
+            </div>
+            <div class="orders">
+                <div class="orders__filters">
+                    <div class="orders__filters-title">
+                        <img src="images/icon-filter.svg" alt="Filter">
+                        <span>Filters</span>
+                    </div>
+                    <div class="orders__filters-item">
+                        <select class="select">
+                            <option value="Open">Open</option>
+                            <option value="Draft">Draft</option>
+                            <option value="Cancelled">Cancelled</option>
+                            <option value="Shipped">Shipped</option>
+                        </select>
+                    </div>
+                    <div class="orders__filters-item">
+                        <span class="orders__filters-item-title">Order Date</span>
+                        <select class="select">
+                            <option value=""></option>
+                        </select>
+                        <select class="select">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="orders__filters-item">
+                        <span class="orders__filters-item-title">Shipping Date</span>
+                        <select class="select">
+                            <option value=""></option>
+                        </select>
+                        <select class="select">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <input type="text" class="orders__filters-search input-search" placeholder="Search">
+                </div>
+
+                <table class="orders__table table table--striped">
+                    <thead>
+                    <tr>
+                        <th>Sales No.</th>
+                        <th>PO No.</th>
+                        <th>Order Date</th>
+                        <th>Shipping Date</th>
+                        <th>Total</th>
+                        <th>Currency</th>
+                        <th>Status</th>
+                        <th>Download</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">72827193</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>09/04/18</td>
+                        <td>13/04/18</td>
+                        <td>3,873.92</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-open-box.svg" alt="open">
+                                <span>Open</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>1,928.31</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-draft.svg" alt="Draft">
+                                <span>Draft</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">82918282</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>2,192.11</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-cancelled.svg" alt="cancelled">
+                                <span>Cancelled</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">82918282</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>17/04/18</td>
+                        <td>873.62</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-shipped.svg" alt="Shipped">
+                                <span>Shipped</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">72827193</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>09/04/18</td>
+                        <td>13/04/18</td>
+                        <td>3,873.92</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-open-box.svg" alt="open">
+                                <span>Open</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>1,928.31</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-draft.svg" alt="Draft">
+                                <span>Draft</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">82918282</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>2,192.11</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-cancelled.svg" alt="cancelled">
+                                <span>Cancelled</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">82918282</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>17/04/18</td>
+                        <td>873.62</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-shipped.svg" alt="Shipped">
+                                <span>Shipped</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">72827193</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>09/04/18</td>
+                        <td>13/04/18</td>
+                        <td>3,873.92</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-open-box.svg" alt="open">
+                                <span>Open</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>1,928.31</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-draft.svg" alt="Draft">
+                                <span>Draft</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">82918282</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>2,192.11</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-cancelled.svg" alt="cancelled">
+                                <span>Cancelled</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./order-open.html">82918282</a>
+                        </td>
+                        <td>
+                            <a href="#">ABC-728178</a>
+                        </td>
+                        <td>13/04/18</td>
+                        <td>17/04/18</td>
+                        <td>873.62</td>
+                        <td>EUR</td>
+                        <td>
+                            <div class="table-status">
+                                <img src="images/icon-shipped.svg" alt="Shipped">
+                                <span>Shipped</span>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/icon-pdf.svg" alt="pdf">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="table-controls">
+                    <div class="table-controls__show-items">
+                        <span>Showing 1 to</span>
+                        <div class="table-controls__dropdown">10</div>
+                        <span>of 192 entries.</span>
+                    </div>
+                    <div class="pagination">
+                        <div class="pagination__arrow">
+                            <svg width="10" height="17" viewBox="0 0 10 17" fill="none">
+                                <path d="M0.826315 9.01137L7.98717 16.1722C8.31488 16.4999 8.8462 16.4999 9.17392 16.1722C9.5016 15.8445 9.5016 15.3132 9.17392 14.9855L2.60642 8.41797L9.17392 1.85052C9.5016 1.5228 9.5016 0.991484 9.17392 0.663767C9.01008 0.499888 8.79528 0.417969 8.58052 0.417969C8.36576 0.417969 8.15096 0.499888 7.98713 0.663767L0.826274 7.82461C0.498597 8.15233 0.498597 8.68365 0.826315 9.01137Z"/>
+                            </svg>
+
+                        </div>
+                        <ul class="pagination__list">
+                            <li>
+                                <a href="#" class="pagination__list-item">1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="pagination__list-item">2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="pagination__list-item">3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="pagination__list-item pagination__list-item--active">4</a>
+                            </li>
+                            <li>
+                                <a href="" class="pagination__list-item pagination__list-item--disabled">...</a>
+                            </li>
+                            <li>
+                                <a href="#" class="pagination__list-item">15</a>
+                            </li>
+
+                        </ul>
+                        <div class="pagination__arrow">
+                            <svg width="10" height="17" viewBox="0 0 10 17" fill="none">
+                                <path d="M9.17393 7.82604L2.01308 0.665191C1.68536 0.337514 1.15404 0.337514 0.826324 0.665191C0.498647 0.992908 0.498647 1.52423 0.826324 1.85194L7.39382 8.41943L0.826324 14.9869C0.498647 15.3146 0.498647 15.8459 0.826324 16.1736C0.990163 16.3375 1.20496 16.4194 1.41972 16.4194C1.63448 16.4194 1.84928 16.3375 2.01312 16.1736L9.17397 9.01279C9.50165 8.68507 9.50165 8.15375 9.17393 7.82604Z"/>
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="scripts/jquery.selectric.min.js"></script>
+<script src="scripts/script.min.js"></script>
+</body>
+</html>

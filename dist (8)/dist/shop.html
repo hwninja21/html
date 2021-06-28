@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/selectric.css">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Shop</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <a href="/" class="sidebar__logo"><img src="images/appmakerz.svg" alt="appzmakerz"></a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-dashboard.svg" alt="Dashboard">
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./orders.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-orders.svg" alt="Orders">
+                        </span>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./shop.html" class="menu__link menu__link--active">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Shop">
+                        </span>
+                        <span>Shop</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-deliveries.svg" alt="Deliveries">
+                        </span>
+                        <span>Deliveries</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-invoices.svg" alt="Invoices">
+                        </span>
+                        <span>Invoices</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payments.svg" alt="Payments">
+                        </span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./credit-notes.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-credit-notes.svg" alt="Credit notes">
+                        </span>
+                        <span>Credit notes</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./chat.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-chat.svg" alt="Chat">
+                        </span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="menu__separator"></li>
+                <li class="menu__item">
+                    <a href="./make-a-payment.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-payment.svg" alt="Make a payment">
+                        </span>
+                        <span>Make a payment</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./place-an-order.html" class="menu__link">
+                        <span class="menu__link-img-wrap">
+                            <img src="images/icon-cart.svg" alt="Place an order">
+                        </span>
+                        <span>Place an order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content">
+        <header class="header">
+            <input type="text" class="header__search" placeholder="Search">
+            <div class="header__buttons">
+                <button class="header__btn">
+                    <img src="images/icon-settings.svg" alt="Settings">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-letter.svg" alt="Messages">
+                </button>
+                <button class="header__btn">
+                    <img src="images/icon-bell.svg" alt="Notifications">
+                </button>
+            </div>
+            <div class="header__user">
+                <span class="header__user-name">Johan Boerema <img src="images/icon-arr-dropdown.svg"></span>
+                <img src="images/avatar.jpg" alt="User avatar" class="header__user-img">
+            </div>
+        </header>
+        <div class="container">
+            <div class="content__header content__header--with-line">
+                <h2 class="title">Online Winkel</h2>
+            </div>
+            <div class="shop">
+                <div class="shop__filters">
+                    <select class="select-shop">
+                        <option value="Kleur">Kleur</option>
+                    </select>
+                    <select class="select-shop">
+                        <option value="Dessin/print">Dessin/print</option>
+                    </select>
+                    <select class="select-shop">
+                        <option value="Stijl">Stijl</option>
+                    </select>
+                    <select class="select-shop">
+                        <option value="Uitstraling">Uitstraling</option>
+                    </select>
+                    <select class="select-shop">
+                        <option value="Collectie">Collectie</option>
+                    </select>
+                    <select class="select-shop">
+                        <option value="Filter op prijs">Filter op prijs</option>
+                    </select>
+                    <select class="select-shop">
+                        <option value="Sorteer op">Sorteer op</option>
+                    </select>
+                </div>
+                <div class="shop__grid">
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img2.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img3.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img2.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img3.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img2.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img3.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img2.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img3.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img2.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__top">
+                            <div class="shop-item__bg shop-item__bg--top-left"></div>
+                            <div class="shop-item__bg shop-item__bg--top-right"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-left"></div>
+                            <div class="shop-item__bg shop-item__bg--bottom-right"></div>
+                            <img src="images/shop-img3.jpg" alt="" class="shop-item__img">
+                            <span class="shop-item__new">nieuw</span>
+                            <button class="shop-item__options">opties</button>
+                        </div>
+                        <div class="shop-item__bottom">
+                            <div>
+                                <h6 class="shop-item__title">Carmen - 392540</h6>
+                                <span class="shop-item__price">€ 59,95 per rol</span>
+                            </div>
+                            <button class="shop-item__cart-btn"><img src="images/icon-cart-white.svg"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination shop__pagination">
+                    <div class="pagination__arrow">
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none">
+                            <path d="M0.826315 9.01137L7.98717 16.1722C8.31488 16.4999 8.8462 16.4999 9.17392 16.1722C9.5016 15.8445 9.5016 15.3132 9.17392 14.9855L2.60642 8.41797L9.17392 1.85052C9.5016 1.5228 9.5016 0.991484 9.17392 0.663767C9.01008 0.499888 8.79528 0.417969 8.58052 0.417969C8.36576 0.417969 8.15096 0.499888 7.98713 0.663767L0.826274 7.82461C0.498597 8.15233 0.498597 8.68365 0.826315 9.01137Z"/>
+                        </svg>
+
+                    </div>
+                    <ul class="pagination__list">
+                        <li>
+                            <a href="#" class="pagination__list-item">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination__list-item">2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination__list-item">3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination__list-item pagination__list-item--active">4</a>
+                        </li>
+                        <li>
+                            <a href="" class="pagination__list-item pagination__list-item--disabled">...</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination__list-item">15</a>
+                        </li>
+
+                    </ul>
+                    <div class="pagination__arrow">
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none">
+                            <path d="M9.17393 7.82604L2.01308 0.665191C1.68536 0.337514 1.15404 0.337514 0.826324 0.665191C0.498647 0.992908 0.498647 1.52423 0.826324 1.85194L7.39382 8.41943L0.826324 14.9869C0.498647 15.3146 0.498647 15.8459 0.826324 16.1736C0.990163 16.3375 1.20496 16.4194 1.41972 16.4194C1.63448 16.4194 1.84928 16.3375 2.01312 16.1736L9.17397 9.01279C9.50165 8.68507 9.50165 8.15375 9.17393 7.82604Z"/>
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="content__header content__header--with-line">
+                    <h2 class="title">Recent bekeken</h2>
+                </div>
+                <div class="shop__recent">
+                    <img src="images/shop-img.jpg">
+                    <img src="images/shop-img2.jpg">
+                    <img src="images/shop-img3.jpg">
+                    <img src="images/shop-img.jpg">
+                    <img src="images/shop-img2.jpg">
+                    <img src="images/shop-img3.jpg">
+                    <img src="images/shop-img2.jpg">
+                </div>
+                <div class="shop__news">
+                    <div class="shop__news-item">
+                        <div class="shop__news-title">Let op: kleuren kunnen afwijken!</div>
+                        <p class="shop__news-description">
+                            De kleuren van onze producten op deze website kunnen afwijken van de daadwerkelijke
+                            productkleur. Dit heeft te maken met hoe de kleuren op je computer zijn ingesteld, maar ook
+                            het type beeldscherm heeft invloed op hoe je kleuren ziet.
+                        </p>
+                        <button class="btn">Lees meer</button>
+                    </div>
+                    <div class="shop__news-item">
+                        <div class="shop__news-title">Projecten / FR-One</div>
+                        <p class="shop__news-description">
+                            Onder de naam Eijffinger Contract verzorgen wij alle activiteiten op het gebied van behang
+                            en/of stoffen voor projecten. Wij bieden een breed scala van producten die voor projecten
+                            geschikt zijn. Van custom-made digitaal behang tot vlamvertragende FR-One stoffen.
+                        </p>
+                        <button class="btn">Lees meer</button>
+                    </div>
+                    <div class="shop__news-item">
+                        <div class="shop__news-title">Goede doelen</div>
+                        <p class="shop__news-description">
+                            Uiteraard dragen wij vele goede doelen een warm hart toe, maar er is er 1 die wij actief
+                            steunen. Dit is Stichting Het Vergeten Kind. Zij strijden voor een Nederland waarin elk kind
+                            zich echt kind voelt, zich goed ontwikkelt en meedoet in de maatschappij.
+                        </p>
+                        <button class="btn">Lees meer</button>
+                    </div>
+                    <div class="shop__news-item">
+                        <div class="shop__news-title">Iedereen kan behangen!</div>
+                        <p class="shop__news-description">
+                            ehangen moeilijk? Echt niet! Bekijk ons stappenplan en je zult zien dat behangen met
+                            smartpaper kinderlijk eenvoudig is. Je interieur een metamorfose geven is dus zo gepiept!
+                        </p>
+                        <button class="btn">Lees meer</button>
+                    </div>
+                </div>
+                <div class="shop__socials">
+                    <a href="#" class="shop__social-link">
+                        <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.9992 0.0049936L9.88695 0C6.39043 0 4.13082 2.31828 4.13082 5.90643V8.62969H1.00158C0.731177 8.62969 0.512207 8.84891 0.512207 9.11932V13.065C0.512207 13.3354 0.731426 13.5544 1.00158 13.5544H4.13082V23.5106C4.13082 23.781 4.34979 24 4.62019 24H8.70296C8.97337 24 9.19234 23.7808 9.19234 23.5106V13.5544H12.8511C13.1216 13.5544 13.3405 13.3354 13.3405 13.065L13.342 9.11932C13.342 8.98948 13.2903 8.86514 13.1987 8.77326C13.1071 8.68138 12.9822 8.62969 12.8524 8.62969H9.19234V6.32115C9.19234 5.21157 9.45675 4.64829 10.9021 4.64829L12.9987 4.64755C13.2689 4.64755 13.4878 4.42833 13.4878 4.15817V0.494367C13.4878 0.224462 13.2691 0.00549296 12.9992 0.0049936Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="shop__social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4V21.6C0 22.92 1.08 24 2.4 24H21.6C22.92 24 24 22.92 24 21.6V2.4C24 1.08 22.92 0 21.6 0ZM12 7.2C14.64 7.2 16.8 9.36 16.8 12C16.8 14.64 14.64 16.8 12 16.8C9.36 16.8 7.2 14.64 7.2 12C7.2 9.36 9.36 7.2 12 7.2ZM3 21.6C2.64 21.6 2.4 21.36 2.4 21V10.8H4.92C4.8 11.16 4.8 11.64 4.8 12C4.8 15.96 8.04 19.2 12 19.2C15.96 19.2 19.2 15.96 19.2 12C19.2 11.64 19.2 11.16 19.08 10.8H21.6V21C21.6 21.36 21.36 21.6 21 21.6H3ZM21.6 5.4C21.6 5.76 21.36 6 21 6H18.6C18.24 6 18 5.76 18 5.4V3C18 2.64 18.24 2.4 18.6 2.4H21C21.36 2.4 21.6 2.64 21.6 3V5.4Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="shop__social-link">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.9852 2.45937C15.3332 0.873459 13.0469 0 10.5477 0C6.73001 0 4.38195 1.56493 3.08445 2.87768C1.48538 4.49548 0.56842 6.6436 0.56842 8.77136C0.56842 11.4429 1.68587 13.4934 3.55718 14.2563C3.68281 14.3077 3.80921 14.3337 3.93314 14.3337C4.32792 14.3337 4.64072 14.0754 4.74909 13.661C4.81225 13.4233 4.95863 12.8368 5.02226 12.5823C5.15849 12.0795 5.04842 11.8377 4.75133 11.4876C4.2101 10.8472 3.95807 10.0899 3.95807 9.10436C3.95807 6.17699 6.13784 3.06578 10.1779 3.06578C13.3834 3.06578 15.3747 4.8877 15.3747 7.82049C15.3747 9.67121 14.9761 11.3852 14.252 12.6468C13.7489 13.5234 12.8641 14.5684 11.5059 14.5684C10.9185 14.5684 10.3909 14.3272 10.058 13.9065C9.74346 13.5089 9.63981 12.9952 9.76629 12.4599C9.90918 11.855 10.104 11.2241 10.2926 10.6141C10.6365 9.50007 10.9616 8.44788 10.9616 7.6084C10.9616 6.1725 10.0789 5.2077 8.76519 5.2077C7.09568 5.2077 5.78773 6.90338 5.78773 9.06806C5.78773 10.1297 6.06988 10.9237 6.1976 11.2286C5.98729 12.1197 4.73732 17.4176 4.50022 18.4166C4.36314 18.9997 3.53728 23.6058 4.90421 23.9731C6.44004 24.3858 7.81285 19.8998 7.95257 19.3928C8.06582 18.9806 8.46206 17.4217 8.70489 16.4634C9.44629 17.1775 10.6401 17.6603 11.8016 17.6603C13.9914 17.6603 15.9607 16.6749 17.3468 14.8858C18.6911 13.1505 19.4315 10.7318 19.4315 8.0757C19.4315 5.99919 18.5398 3.95209 16.9852 2.45937Z"/>
+                        </svg>
+
+                    </a>
+                    <a href="#" class="shop__social-link">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.9171 17.5552H15.6L15.6061 16.7901C15.6061 16.4501 15.8853 16.172 16.2264 16.172H16.3104C16.6523 16.172 16.9323 16.4501 16.9323 16.7901L16.9171 17.5552ZM11.9768 15.9157C11.6427 15.9157 11.3693 16.1403 11.3693 16.4152V20.136C11.3693 20.4104 11.6427 20.6344 11.9768 20.6344C12.3123 20.6344 12.5859 20.4104 12.5859 20.136V16.4152C12.5859 16.14 12.3123 15.9157 11.9768 15.9157ZM20 13.8344V20.9128C20 22.6107 18.5277 24 16.728 24H3.27227C1.472 24 0 22.6107 0 20.9128V13.8344C0 12.1365 1.472 10.7469 3.27227 10.7469H16.728C18.5277 10.7469 20 12.1365 20 13.8344ZM4.16987 21.6813L4.1688 14.2251L5.8368 14.2256V13.1208L1.3904 13.1141V14.2003L2.7784 14.2043V21.6813H4.16987ZM9.16987 15.3357H7.7792V19.3173C7.7792 19.8933 7.81413 20.1813 7.77707 20.2829C7.664 20.5917 7.15573 20.9197 6.9576 20.3163C6.924 20.2107 6.9536 19.892 6.95307 19.3448L6.94747 15.3357H5.56453L5.5688 19.2819C5.56987 19.8867 5.5552 20.3376 5.5736 20.5429C5.60747 20.9048 5.59547 21.3267 5.9312 21.5677C6.5568 22.0184 7.756 21.5005 8.056 20.8563L8.05333 21.6784L9.17013 21.6797L9.16987 15.3357ZM13.6187 19.8952L13.6157 16.5813C13.6147 15.3184 12.6699 14.5621 11.3875 15.584L11.3931 13.1203L10.004 13.1224L9.99733 21.6264L11.1397 21.6099L11.2437 21.0803C12.7032 22.4192 13.6208 21.5016 13.6187 19.8952ZM17.9709 19.456L16.9283 19.4616C16.9277 19.5029 16.9261 19.5507 16.9256 19.6027V20.1845C16.9256 20.496 16.6683 20.7496 16.3557 20.7496H16.1515C15.8384 20.7496 15.5811 20.496 15.5811 20.1845V20.12V19.48V18.6541H17.9688V17.7555C17.9688 17.0987 17.952 16.4421 17.8976 16.0667C17.7267 14.8789 16.0595 14.6904 15.2173 15.2984C14.9531 15.4883 14.7512 15.7424 14.6339 16.0837C14.5155 16.4253 14.4565 16.892 14.4565 17.4848V19.4608C14.4571 22.7456 18.4469 22.2813 17.9709 19.456ZM12.6221 8.72853C12.6939 8.90293 12.8053 9.04427 12.9565 9.15093C13.1059 9.256 13.2968 9.3088 13.5256 9.3088C13.7261 9.3088 13.9037 9.25467 14.0584 9.14293C14.2125 9.03173 14.3424 8.8656 14.4485 8.644L14.4221 9.1896H15.9723V2.59733H14.752V7.728C14.752 8.00587 14.5232 8.23333 14.2435 8.23333C13.9653 8.23333 13.7357 8.00587 13.7357 7.728V2.59733H12.4621V7.04373C12.4621 7.61013 12.4725 7.98773 12.4893 8.1792C12.5067 8.36933 12.5504 8.55173 12.6221 8.72853ZM7.92453 5.00533C7.92453 4.37253 7.97733 3.8784 8.08213 3.52213C8.18773 3.1672 8.37733 2.88187 8.652 2.66667C8.92587 2.4504 9.27653 2.34213 9.70293 2.34213C10.0616 2.34213 10.3688 2.41253 10.6253 2.5504C10.8832 2.68907 11.0821 2.86907 11.22 3.0912C11.3605 3.31413 11.456 3.5432 11.5069 3.7776C11.5589 4.0152 11.5845 4.3736 11.5845 4.85707V6.52427C11.5845 7.13573 11.56 7.5856 11.5123 7.8712C11.4651 8.1576 11.3637 8.4232 11.2067 8.67227C11.052 8.91867 10.8523 9.10293 10.6101 9.22053C10.3653 9.3392 10.0853 9.39733 9.76907 9.39733C9.41573 9.39733 9.11813 9.34853 8.8728 9.24667C8.62667 9.14533 8.43653 8.99253 8.30107 8.7896C8.16427 8.5864 8.068 8.33893 8.00987 8.0504C7.95147 7.76213 7.92373 7.32853 7.92373 6.75067L7.92453 5.00533ZM9.13867 7.624C9.13867 7.99733 9.41653 8.30213 9.75493 8.30213C10.0936 8.30213 10.3704 7.99733 10.3704 7.624V4.11467C10.3704 3.74187 10.0936 3.43707 9.75493 3.43707C9.41653 3.43707 9.13867 3.74187 9.13867 4.11467V7.624ZM4.84853 9.396H6.31093L6.31253 4.34L8.04053 0.0088H6.44107L5.5224 3.22587L4.59067 0H3.00773L4.84613 4.3424L4.84853 9.396Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="shop__footer">
+                    <h6 class="shop__footer-title">Schrijf je in voor onze nieuwsbrief en blijf op de hoogte!</h6>
+                    <form action="#" class="shop__subscribe">
+                        <input type="email" placeholder="Email" class="shop__subscribe-input">
+                        <button class="btn">Versturen</button>
+                    </form>
+                    <p>Copyright 2019 Appmakerz Nederland. Alle rechten voorbehouden. Privacyvoorwaarden Disclaimer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="scripts/jquery.selectric.min.js"></script>
+<script src="scripts/script.min.js"></script>
+</body>
+</html>
